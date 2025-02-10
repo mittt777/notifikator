@@ -140,6 +140,9 @@ public class NotificationService extends NotificationListenerService
 		if (title == null || text == null)
 			return null;
 
+		if (text.indexOf("微信支付: 二维码赞赏到账") < 0)
+			return null;
+
 		JSONObject result = new JSONObject();
 		try
 		{
